@@ -1,27 +1,33 @@
-# Color-Analyzer
+# Color Analyzer Widget
 
-Dieses Programm ist ein einfaches GUI-Tool zum Analysieren der durchschnittlichen Farbe eines Bildes.
+Dies ist ein PyQt5-Widget, das es Ihnen ermöglicht, die durchschnittliche Farbe eines Bildes zu analysieren und sie als Textdatei zu speichern.
 
-Installation:
+## Verwendung
 
-Dieses Programm benötigt Python 3 und die folgenden Bibliotheken: tkinter, PIL (Python Imaging Library).
-Die Bibliotheken können mit pip installiert werden:
-pip install tkinter
-pip install pillow
+Um das Color Analyzer Widget zu verwenden, befolgen Sie diese Schritte:
 
-Verwendung:
+1. Wählen Sie ein Bild aus, indem Sie auf die Schaltfläche "Open File" klicken oder den Dateipfad manuell in das Texteingabefeld eingeben.
+2. Klicken Sie auf die Schaltfläche "Analyze Color", um die durchschnittliche Farbe des ausgewählten Bildes zu analysieren.
+3. Die durchschnittliche Farbe wird im hexadezimalen Format unterhalb der Schaltfläche "Farbe analysieren" angezeigt.
+4. Das ausgewählte Bild wird im Widget angezeigt.
+5. Klicken Sie auf die Schaltfläche "Save Color", um die durchschnittliche Farbe als Textdatei zu speichern.
 
-Führen Sie das Programm aus, indem Sie "python color_analyzer.py" in der Kommandozeile eingeben.
-Klicken Sie auf die Schaltfläche "Open File", um ein Bild auszuwählen.
-Das ausgewählte Bild wird in der Anwendung angezeigt und die durchschnittliche Farbe des Bildes wird berechnet und in Hexadezimalform angezeigt.
+## Abhängigkeiten
 
-Code-Erklärung:
+Stellen Sie sicher, dass Sie die folgenden Abhängigkeiten installiert haben:
 
-Die Funktion analyze_color nimmt den Pfad zum Bild als Eingabe und gibt die durchschnittliche Farbe des Bildes zurück.
-Die Funktion show_image nimmt den Pfad zum Bild als Eingabe und zeigt das Bild in der Anwendung an.
-Die Funktion get_file wird aufgerufen, wenn die Schaltfläche "Open File" geklickt wird. Es öffnet ein Dateiauswahldialogfeld, um ein Bild auszuwählen.
-Die Funktion get_color wird aufgerufen, wenn die Schaltfläche "Analyze color" geklickt wird. Es ruft die Funktion analyze_color auf, um die durchschnittliche Farbe des ausgewählten Bildes zu berechnen, und zeigt das Bild und die durchschnittliche Farbe in der Anwendung an.
+- PyQt5
+- Pillow
 
-!!Hinweis:
+## Funktionen
 
-Das Programm zeigt das ausgewählte Bild in einem Label-Widget an. Wenn das Bild zu groß ist, wird es automatisch auf eine Größe von 300 x 300 Pixeln skaliert, um das Label-Widget nicht zu überladen.
+- `initUI()`: Definiert die Benutzeroberfläche des Widgets.
+- `get_file()`: Ruft den Dateipfad des ausgewählten Bildes ab.
+- `get_color()`: Analysiert die Farbe des ausgewählten Bildes und zeigt sie an.
+- `analyze_color(image_path)`: Analysiert die Farbe eines Bildes und gibt die durchschnittliche Farbe zurück.
+- `show_image(image_path)`: Zeigt das ausgewählte Bild im Widget an.
+- `save_color()`: Speichert die durchschnittliche Farbe als Textdatei.
+
+## Hinweis
+
+Dieses Widget wurde von Satisfraction erstellt und unter der MIT-Lizenz lizenziert.
